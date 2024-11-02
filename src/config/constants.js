@@ -58,54 +58,62 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
+    category: "Frontend",
   },
   {
     name: "CSS 3",
     icon: css,
+    category: "Frontend",
   },
   {
     name: "JavaScript",
     icon: javascript,
+    category: "Frontend",
   },
   {
     name: "TypeScript",
     icon: typescript,
+    category: "Frontend",
   },
   {
     name: "React JS",
     icon: reactjs,
+    category: "Frontend",
   },
   {
     name: "Redux Toolkit",
     icon: redux,
+    category: "Frontend",
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    category: "Frontend",
   },
   {
     name: "Node JS",
     icon: nodejs,
+    category: "Backend",
   },
   {
     name: "MongoDB",
     icon: mongodb,
+    category: "Database",
   },
   {
     name: "Three JS",
     icon: threejs,
+    category: "Frontend",
   },
   {
     name: "git",
     icon: git,
+    category: "Tools",
   },
   {
     name: "figma",
     icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    category: "Tools",
   },
 ];
 

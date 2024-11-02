@@ -39,7 +39,7 @@ const Footer = () => {
     { title: "About Me", href: "#about" },
     { title: "Experience", href: "#experience" },
     { title: "Projects", href: "#projects" },
-    { title: "Skills", href: "#skills" },
+    { title: "Tech Stack", href: "#tech" },
     { title: "Contact", href: "#contact" },
   ];
 
