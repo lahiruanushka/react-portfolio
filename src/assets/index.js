@@ -23,9 +23,7 @@ import threejs from "./tech/threejs.svg";
 
 import dsp from "./company/dsp.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import jobfinder from "./works/jobfinder.png";
 
 export {
   logo,
@@ -50,7 +48,5 @@ export {
   typescript,
   threejs,
   dsp,
-  carrent,
-  jobit,
-  tripguide,
+  jobfinder
 };
