@@ -8,7 +8,9 @@ const Navbar = () => {
 
   const navLinks = [
     { id: "about", title: "About" },
-    { id: "work", title: "Work" },
+    { id: "experience", title: "Experience" },
+    { id: "projects", title: "Projects" },
+    { id: "skills", title: "Skills" },
     { id: "contact", title: "Contact" },
   ];
 
@@ -72,7 +74,7 @@ const Navbar = () => {
                 Lahiru Anushka
               </span>
               <span className="text-sm text-gray-600 dark:text-gray-400">
-                Portfolio
+                Software Engineer
               </span>
             </div>
           </Link>
