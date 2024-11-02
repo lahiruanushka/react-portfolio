@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -15,9 +16,10 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState({}); // Track validation errors
+  const [errors, setErrors] = useState({});
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
 
-  // Validate the form inputs
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required.";
@@ -29,7 +31,7 @@ const Contact = () => {
     if (!formData.message.trim()) newErrors.message = "Message is required.";
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // True if no errors
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleChange = (e) => {
@@ -38,8 +40,6 @@ const Contact = () => {
       ...formData,
       [name]: value,
     });
-
-    // Clear error for the field being updated
     setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
   };
 
@@ -49,13 +49,38 @@ const Contact = () => {
 
     setLoading(true);
 
-    console.log(formData);
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          to_name: "Lahiru Anushka",
+          from_email: formData.email,
+          to_email: "lahiruanushka121@gmail.com",
+          message: formData.message,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSuccess(true);
+          setFormData({ name: "", email: "", message: "" });
+          setError("");
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+          setError("Ahh, something went wrong. Please try again later.");
+          setSuccess(false);
+        }
+      );
 
-    // Simulate sending form data
     setTimeout(() => {
-      setLoading(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 2000);
+      setError("");
+      setSuccess(false);
+    }, 5000);
   };
 
   return (
@@ -114,6 +139,13 @@ const Contact = () => {
               <p className="text-red-500 text-sm mt-2">{errors.message}</p>
             )}
           </label>
+
+          {error && <p className="text-red-500">{error}</p>}
+          {success && (
+            <p className="text-green-500">
+              Thank you. I will get back to you as soon as possible.
+            </p>
+          )}
 
           <button
             type="submit"
