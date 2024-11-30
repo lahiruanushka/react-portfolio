@@ -18,6 +18,7 @@ import {
   dsp,
   jobfinder,
   threejs,
+  ranjuLakshan,
 } from "../assets";
 
 export const navLinks = [
@@ -134,7 +135,16 @@ const experiences = [
   },
 ];
 
-const testimonials = [];
+const testimonials = [
+  {
+    testimonial:
+      "I had the pleasure of working alongside Lahiru, who consistently demonstrated his passion for software development and problem solving. As a Trainee Software Engineer, Lahiru showcased exceptional dedication to learning and building innovative solutions. I am confident Lahiru's commitment to excellence and growth will continue to shine in his career. I strongly recommend him to any team or organization looking for a motivated and skilled software engineer.",
+    name: "Ranju Laksahan Gamage",
+    designation: "Software Engineer",
+    company: "DSP Engineering Solutions",
+    image: ranjuLakshan,
+  },
+];
 
 const projects = [
   {

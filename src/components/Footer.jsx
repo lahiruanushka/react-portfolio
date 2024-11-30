@@ -141,7 +141,7 @@ const Footer = () => {
               © {currentYear} Lahiru Anushka. All rights reserved.
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Made with ❤️ using React & Tailwind
+              Made by ❤️ Lahiru Anushka
             </p>
           </div>
         </div>
