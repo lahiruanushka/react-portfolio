@@ -30,10 +30,11 @@ const App = () => {
 
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
+          {/* Remove StarsCanvas from here since it's now global */}
         </div>
 
         <Footer />
+        <StarsCanvas />
       </div>
     </BrowserRouter>
   );
