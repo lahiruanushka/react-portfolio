@@ -12,6 +12,7 @@ import {
   StarsCanvas,
 } from "./components";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
@@ -30,11 +31,11 @@ const App = () => {
 
         <div className="relative z-0">
           <Contact />
-          {/* Remove StarsCanvas from here since it's now global */}
         </div>
 
         <Footer />
         <StarsCanvas />
+        <ScrollToTop />
       </div>
     </BrowserRouter>
   );
