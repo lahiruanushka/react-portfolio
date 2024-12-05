@@ -19,6 +19,8 @@ import {
   jobfinder,
   threejs,
   ranjuLakshan,
+  arcclogo,
+  sliatelogo,
 } from "../assets";
 
 export const navLinks = [
@@ -135,6 +137,30 @@ const experiences = [
   },
 ];
 
+const educationDetails = [
+  {
+    institute:
+      "Sri Lanka Institute of Advanced Technological Education (SLIATE) - Kandy",
+    course: "Higher National Diploma in Information Technology (HNDIT)",
+    duration: "2021 - 2024",
+    icon: sliatelogo,
+    achievements: [
+      "Gained strong foundational knowledge in software development and IT technologies.",
+      "Completed hands-on projects in web and software development.",
+    ],
+  },
+  {
+    institute: "Walala A. Rathnayake Central College",
+    course: "Advanced Level (Engineering Technology Stream)",
+    duration: "2011 - 2019",
+    icon: arcclogo,
+    achievements: [
+      "Excelled in Engineering Technology and related subjects.",
+      "Member of National Cadet Corps",
+    ],
+  },
+];
+
 const testimonials = [
   {
     testimonial:
@@ -171,4 +197,11 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  technologies,
+  experiences,
+  educationDetails,
+  testimonials,
+  projects,
+};

@@ -23,7 +23,10 @@ import threejs from "./tech/threejs.svg";
 import dsp from "./company/dsp.png";
 
 import jobfinder from "./works/jobfinder.png";
-import ranjuLakshan from "./testimonials/ranju-lakshan.jfif"
+import ranjuLakshan from "./testimonials/ranju-lakshan.jfif";
+
+import arcclogo from "./education/arcc-logo.png";
+import sliatelogo from "./education/SLIATE_LOGO.png";
 
 export {
   backend,
@@ -48,5 +51,7 @@ export {
   threejs,
   dsp,
   jobfinder,
-  ranjuLakshan
+  ranjuLakshan,
+  arcclogo,
+  sliatelogo,
 };

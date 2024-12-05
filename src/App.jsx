@@ -10,6 +10,7 @@ import {
   Tech,
   Projects,
   StarsCanvas,
+  Education,
 } from "./components";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -25,6 +26,7 @@ const App = () => {
 
         <About />
         <Experience />
+        <Education />
         <Projects />
         <Tech />
         <Feedbacks />
