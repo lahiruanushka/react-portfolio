@@ -72,13 +72,13 @@ const ScrollToTop = () => {
               group-hover:-translate-y-1 group-hover:scale-105"
             >
               <div
-                className="w-14 h-14 bg-[#915EFF] rounded-full flex items-center justify-center 
-                shadow-xl border-2 border-white/10 
-                group-hover:shadow-2xl group-hover:bg-purple-600 transition duration-300"
+                className="w-12 h-12 bg-[#915EFF] rounded-full flex items-center justify-center 
+  shadow-xl border-2 border-white/10 
+  group-hover:shadow-2xl group-hover:bg-purple-600 transition duration-300"
               >
                 <LuArrowUp
-                  className="text-white w-8 h-8 transform transition-transform 
-                  group-hover:scale-110 group-hover:rotate-6"
+                  className="text-white w-6 h-6 transform transition-transform 
+    group-hover:scale-110 group-hover:rotate-6"
                 />
               </div>
             </div>
