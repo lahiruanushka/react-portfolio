@@ -11,6 +11,7 @@ import {
 import { projects } from "../config/constants";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const ProjectCard = ({
   index,
@@ -274,7 +275,7 @@ const Projects = () => {
   const [isGitHubPopupOpen, setIsGitHubPopupOpen] = useState(false);
 
   return (
-    <div className="bg-gradient-to-br min-h-screen py-12 md:py-16 relative overflow-hidden">
+    <div id="projects" className="bg-gradient-to-br min-h-screen py-12 md:py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div variants={textVariant()}>
@@ -315,4 +316,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default SectionWrapper(Projects, "projects");

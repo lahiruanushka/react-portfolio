@@ -47,7 +47,7 @@ import ranjuLakshan from "./testimonials/ranju-lakshan.jfif";
 
 // education
 import arcclogo from "./education/arcc-logo.png";
-import sliatelogo from "./education/SLIATE_LOGO.png";
+import sliatelogo from "./education/sltate_logo.jpg";
 
 export {
   backend,

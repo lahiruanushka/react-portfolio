@@ -38,6 +38,7 @@ const Footer = () => {
   const portfolioSections = [
     { title: "About Me", href: "#about" },
     { title: "Experience", href: "#experience" },
+    { title: "Education", href: "#education" },
     { title: "Projects", href: "#projects" },
     { title: "Tech Stack", href: "#tech" },
     { title: "Contact", href: "#contact" },
