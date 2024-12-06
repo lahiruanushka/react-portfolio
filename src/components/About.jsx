@@ -128,11 +128,26 @@ const About = () => {
                 </motion.span>
               </span>
             </p>
-
             <h2
-              className={`${styles.sectionHeadText} mt-2 text-2xl sm:text-3xl md:text-4xl`}
+              className={`${styles.sectionHeadText} mt-2 text-2xl sm:text-3xl md:text-4xl flex items-center`}
             >
-              Overview<span className="text-[#915EFF]">.</span>
+              Overview
+              <motion.span
+                className="text-[#915EFF]"
+                animate={{
+                  x: ["-100%", "0%"],
+                  opacity: [0, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                  repeatDelay: 1,
+                }}
+              >
+                .
+              </motion.span>
             </h2>
           </div>
         </motion.div>
@@ -143,21 +158,38 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-4 sm:mt-6 text-secondary text-base sm:text-lg max-w-3xl leading-relaxed 
-          bg-[#1D1836]/70 backdrop-blur-sm rounded-xl p-4 sm:p-6 
-          border border-[#915EFF]/10 relative overflow-hidden"
+  relative group"
         >
+          {/* Gradient background that appears on hover */}
           <div
-            className="absolute inset-0 bg-grid-white/5 opacity-50 
-            pointer-events-none"
+            className="absolute -inset-0.5 bg-gradient-to-r from-[#915EFF] to-purple-600 
+    rounded-xl opacity-0 group-hover:opacity-100 blur-lg transition-all duration-300"
           />
-          <span className="relative z-10">
-            I am an IT graduate from SLIATE, having completed my coursework with
-            graduation pending. During my internship as a trainee Software
-            Engineer, I gained valuable hands-on experience in software
-            development, which solidified my passion for creating dynamic,
-            innovative digital solutions that balance creativity with
-            functionality.
-          </span>
+
+          {/* Main content container */}
+          <div
+            className="relative bg-[#1D1836]/70 backdrop-blur-sm rounded-xl p-4 sm:p-6 
+    border border-[#915EFF]/10 overflow-hidden
+    transform transition-all duration-300 
+    group-hover:border-[#915EFF]/50 group-hover:scale-[1.02]"
+          >
+            {/* Grid background */}
+            <div
+              className="absolute inset-0 bg-grid-white/5 opacity-0 
+      group-hover:opacity-100 transition-opacity duration-300 
+      pointer-events-none"
+            />
+
+            {/* Text content */}
+            <span className="relative z-10 block">
+              I am an IT graduate from SLIATE, having completed my coursework
+              with graduation pending. During my internship as a trainee
+              Software Engineer, I gained valuable hands-on experience in
+              software development, which solidified my passion for creating
+              dynamic, innovative digital solutions that balance creativity with
+              functionality.
+            </span>
+          </div>
         </motion.p>
 
         {/* Services Grid */}

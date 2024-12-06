@@ -6,6 +6,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+// tech
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -20,11 +21,21 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+// expirence
 import dsp from "./company/dsp.png";
 
+// projects
 import jobfinder from "./works/jobfinder.png";
+import postvibe from "./works/postvibe.png";
+import byteThoughts from "./works/ByteThoughts.png";
+import bookwhiz from "./works/bookwhiz.png";
+import estateEase from "./works/estateEase.png";
+import blogVerse from "./works/blogverse.png";
+
+// testimonias
 import ranjuLakshan from "./testimonials/ranju-lakshan.jfif";
 
+// education
 import arcclogo from "./education/arcc-logo.png";
 import sliatelogo from "./education/SLIATE_LOGO.png";
 
@@ -51,6 +62,11 @@ export {
   threejs,
   dsp,
   jobfinder,
+  postvibe,
+  byteThoughts,
+  bookwhiz,
+  estateEase,
+  blogVerse,
   ranjuLakshan,
   arcclogo,
   sliatelogo,

@@ -21,6 +21,11 @@ import {
   ranjuLakshan,
   arcclogo,
   sliatelogo,
+  postvibe,
+  byteThoughts,
+  bookwhiz,
+  estateEase,
+  blogVerse,
 } from "../assets";
 
 export const navLinks = [
@@ -174,28 +179,163 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Job Finder",
+    name: "JobFinder",
     description:
-      "JobFinder is a powerful Laravel-based web application tailored for job seekers and employers. With a modern interface and user-friendly features, JobFinder offers an intuitive experience for posting and searching for jobs, while giving administrators comprehensive tools to manage platform content and users.",
+      "A comprehensive job search platform built with Laravel, designed to bridge the gap between job seekers and employers. The application features robust user authentication, advanced job filtering, and an intuitive admin dashboard for managing job listings, user profiles, and platform interactions.",
     tags: [
       {
-        name: "laravel",
-        color: "pink-text-gradient",
+        name: "Laravel",
+        color: "bg-gradient-to-r from-pink-500 to-pink-700",
       },
       {
-        name: "mysql",
-        color: "blue-text-gradient",
+        name: "MySQL",
+        color: "bg-gradient-to-r from-blue-500 to-blue-700",
       },
       {
-        name: "tailwind",
-        color: "green-text-gradient",
+        name: "Tailwind CSS",
+        color: "bg-gradient-to-r from-green-500 to-green-700",
+      },
+      {
+        name: "Full-Stack",
+        color: "bg-gradient-to-r from-purple-500 to-purple-700",
       },
     ],
     image: jobfinder,
     source_code_link:
       "https://github.com/lahiruanushka/laravel-job-posting-app.git",
   },
+  {
+    name: "PostVibe",
+    description:
+      "An innovative social media platform leveraging Laravel's powerful ecosystem. PostVibe offers a rich user experience with features like real-time post sharing, dynamic user profiles, advanced search functionality, and secure authentication. The platform demonstrates modern web development practices with a focus on user engagement and interaction.",
+    tags: [
+      {
+        name: "Laravel",
+        color: "bg-gradient-to-r from-pink-500 to-pink-700",
+      },
+      {
+        name: "SQLite",
+        color: "bg-gradient-to-r from-yellow-500 to-yellow-700",
+      },
+      {
+        name: "Bootstrap 5",
+        color: "bg-gradient-to-r from-blue-500 to-blue-700",
+      },
+      {
+        name: "Social Media",
+        color: "bg-gradient-to-r from-indigo-500 to-indigo-700",
+      },
+    ],
+    image: postvibe,
+    source_code_link:
+      "https://github.com/lahiruanushka/laravel-social-media-platform.git",
+  },
+  {
+    name: "ByteThoughts",
+    description:
+      "A cutting-edge blogging platform built with the MERN stack, offering a seamless content creation and discovery experience. Features include user authentication with JWT, rich text editing, categorized blog posts, and an admin panel for content moderation. The application showcases modern web development techniques and responsive design principles.",
+    tags: [
+      {
+        name: "MongoDB",
+        color: "bg-gradient-to-r from-green-500 to-green-700",
+      },
+      {
+        name: "Express.js",
+        color: "bg-gradient-to-r from-gray-500 to-gray-700",
+      },
+      {
+        name: "React",
+        color: "bg-gradient-to-r from-blue-500 to-blue-700",
+      },
+      {
+        name: "Node.js",
+        color: "bg-gradient-to-r from-green-600 to-green-800",
+      },
+    ],
+    image: byteThoughts,
+    source_code_link: "https://github.com/lahiruanushka/mern-blog.git",
+  },
+  {
+    name: "BookWhiz",
+    description:
+      "A sophisticated e-commerce bookstore application developed using the MERN stack. BookWhiz provides a comprehensive shopping experience with features like advanced book browsing, intelligent cart management, wishlist functionality, and secure user authentication. The platform demonstrates a clean, modern design with robust backend infrastructure.",
+    tags: [
+      {
+        name: "MongoDB",
+        color: "bg-gradient-to-r from-green-500 to-green-700",
+      },
+      {
+        name: "React",
+        color: "bg-gradient-to-r from-blue-500 to-blue-700",
+      },
+      {
+        name: "Node.js",
+        color: "bg-gradient-to-r from-green-600 to-green-800",
+      },
+      {
+        name: "E-Commerce",
+        color: "bg-gradient-to-r from-purple-500 to-purple-700",
+      },
+    ],
+    image: bookwhiz,
+    source_code_link:
+      "https://github.com/lahiruanushka/mern-book-store-app.git",
+  },
+  {
+    name: "EstateEase",
+    description:
+      "A modern real estate application that revolutionizes property exploration and management. Built with React and Appwrite, EstateEase offers interactive property listings, geospatial mapping with Leaflet, comprehensive user authentication, and a responsive design. The application leverages cutting-edge technologies to create an intuitive real estate browsing experience.",
+    tags: [
+      {
+        name: "Appwrite",
+        color: "bg-gradient-to-r from-pink-500 to-pink-700",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "bg-gradient-to-r from-green-500 to-green-700",
+      },
+      {
+        name: "React",
+        color: "bg-gradient-to-r from-blue-500 to-blue-700",
+      },
+      {
+        name: "Geolocation",
+        color: "bg-gradient-to-r from-indigo-500 to-indigo-700",
+      },
+    ],
+    image: estateEase,
+    source_code_link:
+      "https://github.com/lahiruanushka/react-appwrite-estate-app.git",
+  },
+  {
+    name: "BlogVerse",
+    description:
+      "BlogVerse is a modern blogging platform built with React and Appwrite, featuring rich text editing, secure user authentication, and a responsive design powered by Tailwind CSS. The app enables users to easily create and manage posts, while leveraging Appwrite for backend services. With state management handled by Redux Toolkit and dynamic routing via React Router, this project offers a seamless and interactive user experience for bloggers and content creators.",
+    tags: [
+      {
+        name: "Appwrite",
+        color: "bg-gradient-to-r from-pink-500 to-pink-700",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "bg-gradient-to-r from-green-500 to-green-700",
+      },
+      {
+        name: "React",
+        color: "bg-gradient-to-r from-blue-500 to-blue-700",
+      },
+      {
+        name: "Redux",
+        color: "bg-gradient-to-r from-purple-500 to-purple-700",
+      },
+    ],
+    image: blogVerse,
+    source_code_link:
+      "https://github.com/lahiruanushka/react-appwrite-blog-app.git",
+  },
 ];
+
+export default projects;
 
 export {
   services,
