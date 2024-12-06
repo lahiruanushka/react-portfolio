@@ -281,7 +281,7 @@ const Projects = () => {
           <p className={`${styles.sectionSubText} text-center`}>
             Innovative Solutions & Creative Coding
           </p>
-          <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
+          <h2 className={`${styles.sectionHeadText} text-center`}>Projects.</h2>
         </motion.div>
 
         {/* Projects Grid */}

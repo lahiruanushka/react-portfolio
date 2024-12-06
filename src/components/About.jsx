@@ -131,23 +131,7 @@ const About = () => {
             <h2
               className={`${styles.sectionHeadText} mt-2 text-2xl sm:text-3xl md:text-4xl flex items-center`}
             >
-              Overview
-              <motion.span
-                className="text-[#915EFF]"
-                animate={{
-                  x: ["-100%", "0%"],
-                  opacity: [0, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  ease: "easeInOut",
-                  repeatDelay: 1,
-                }}
-              >
-                .
-              </motion.span>
+              Overview.
             </h2>
           </div>
         </motion.div>

@@ -71,7 +71,7 @@ const Education = () => {
         <p className={`${styles.sectionSubText} text-center`}>
           My Educational Journey
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Education</h2>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Education.</h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col gap-8">
