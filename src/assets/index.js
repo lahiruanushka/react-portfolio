@@ -20,6 +20,16 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import php from "./tech/php.png";
+import laravel from "./tech/laravel.png";
+import express from "./tech/express.png";
+import bootstrap from "./tech/bootstrap.png";
+import vue from "./tech/vue.png";
+import mysql from "./tech/mysql.png";
+import sqlserver from "./tech/sqlserver.png";
+import sqlite from "./tech/sqlite.png";
+import csharp from "./tech/csharp.png";
+import dotnet from "./tech/dotnet.jpg";
 
 // expirence
 import dsp from "./company/dsp.png";
@@ -70,4 +80,14 @@ export {
   ranjuLakshan,
   arcclogo,
   sliatelogo,
+  php,
+  laravel,
+  express,
+  bootstrap,
+  vue,
+  mysql,
+  sqlserver,
+  sqlite,
+  csharp,
+  dotnet
 };

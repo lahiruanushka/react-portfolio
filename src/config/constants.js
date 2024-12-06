@@ -26,6 +26,16 @@ import {
   bookwhiz,
   estateEase,
   blogVerse,
+  php,
+  laravel,
+  express,
+  bootstrap,
+  vue,
+  mysql,
+  sqlserver,
+  sqlite,
+  csharp,
+  dotnet,
 } from "../assets";
 
 export const navLinks = [
@@ -89,6 +99,11 @@ const technologies = [
     category: "Frontend",
   },
   {
+    name: "Vue JS",
+    icon: vue,
+    category: "Frontend",
+  },
+  {
     name: "Redux Toolkit",
     icon: redux,
     category: "Frontend",
@@ -99,8 +114,38 @@ const technologies = [
     category: "Frontend",
   },
   {
+    name: "Bootstrap",
+    icon: bootstrap,
+    category: "Frontend",
+  },
+  {
     name: "Node JS",
     icon: nodejs,
+    category: "Backend",
+  },
+  {
+    name: "PHP",
+    icon: php,
+    category: "Backend",
+  },
+  {
+    name: "Laravel",
+    icon: laravel,
+    category: "Backend",
+  },
+  {
+    name: "Express.js",
+    icon: express,
+    category: "Backend",
+  },
+  {
+    name: "C#",
+    icon: csharp,
+    category: "Backend",
+  },
+  {
+    name: ".NET",
+    icon: dotnet,
     category: "Backend",
   },
   {
@@ -109,9 +154,19 @@ const technologies = [
     category: "Database",
   },
   {
-    name: "Three JS",
-    icon: threejs,
-    category: "Frontend",
+    name: "MySql",
+    icon: mysql,
+    category: "Database",
+  },
+  {
+    name: "Sql Server",
+    icon: sqlserver,
+    category: "Database",
+  },
+  {
+    name: "Sqlite",
+    icon: sqlite,
+    category: "Database",
   },
   {
     name: "git",
