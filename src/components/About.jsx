@@ -110,24 +110,21 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="relative inline-block">
-            <p
-              className={`${styles.sectionSubText} text-[#915EFF] 
-              relative overflow-hidden text-sm sm:text-base`}
+            <motion.div
+              className={`${styles.sectionSubText} text-[#915EFF] relative overflow-hidden text-sm sm:text-base`}
             >
-              <span className="block">
-                <motion.span
-                  initial={{ x: "-100%" }}
-                  animate={{ x: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 15,
-                  }}
-                >
-                  Introduction
-                </motion.span>
-              </span>
-            </p>
+              <motion.span
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 15,
+                }}
+              >
+                Introduction
+              </motion.span>
+            </motion.div>
             <h2
               className={`${styles.sectionHeadText} mt-2 text-2xl sm:text-3xl md:text-4xl flex items-center`}
             >
