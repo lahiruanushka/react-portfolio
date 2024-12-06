@@ -1,26 +1,30 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../config/constants";
 import { styles } from "../styles";
 
-const TechBall = ({ technology, isHovered, onHover, onLeave }) => (
+const TechIcon = ({ technology, isHovered, onHover, onLeave }) => (
   <motion.div
     initial={{ scale: 0.9, opacity: 0 }}
     animate={{ scale: 1, opacity: 1 }}
-    whileHover={{ scale: 1.1 }}
+    whileHover={{ scale: 1.05 }}
     transition={{
       type: "spring",
-      stiffness: 400,
-      damping: 25,
+      stiffness: 300,
+      damping: 20,
     }}
-    className="relative group cursor-pointer"
+    className="relative group cursor-pointer flex flex-col items-center justify-center"
     onMouseEnter={onHover}
     onMouseLeave={onLeave}
   >
-    <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center transition-all duration-300">
-      <BallCanvas icon={technology.icon} />
+    {/* Display technology icon */}
+    <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center">
+      <img
+        src={technology.icon}
+        alt={technology.name}
+        className="max-w-full max-h-full object-contain"
+      />
     </div>
 
     <AnimatePresence>
@@ -52,7 +56,7 @@ const CategoryHeader = ({ category, count }) => (
     <div className="flex-1 flex items-center gap-4">
       <div className="h-px flex-1 bg-gradient-to-r from-purple-500/50 to-transparent" />
       <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-        {count} {count === 1 ? 'technology' : 'technologies'}
+        {count} {count === 1 ? "technology" : "technologies"}
       </span>
     </div>
   </div>
@@ -70,13 +74,14 @@ const Tech = () => {
   }, {});
 
   const allCategories = ["All", ...Object.keys(categories)];
-  const filteredTechnologies = selectedCategory === "All" 
-    ? technologies 
-    : categories[selectedCategory] || [];
+  const filteredTechnologies =
+    selectedCategory === "All"
+      ? technologies
+      : categories[selectedCategory] || [];
 
   return (
     <div className="relative py-16 lg:py-24 overflow-hidden">
-      {/* Enhanced Background Gradients */}
+      {/* Background Gradients */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-24 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute -bottom-24 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
@@ -119,13 +124,13 @@ const Tech = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400"
           >
-            A curated collection of technologies I leverage to craft modern, 
+            A curated collection of technologies I leverage to craft modern,
             scalable, and innovative solutions
           </motion.p>
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
@@ -156,8 +161,8 @@ const Tech = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 md:p-8 shadow-2xl"
         >
-          <CategoryHeader 
-            category={selectedCategory} 
+          <CategoryHeader
+            category={selectedCategory}
             count={filteredTechnologies.length}
           />
 
@@ -175,7 +180,7 @@ const Tech = () => {
             }}
           >
             {filteredTechnologies.map((technology) => (
-              <TechBall
+              <TechIcon
                 key={technology.name}
                 technology={technology}
                 isHovered={hoveredTech === technology.name}
