@@ -51,7 +51,7 @@ const UnavailableServiceModal = ({ isOpen, onClose }) => {
           </h2>
 
           <p className="text-slate-400 mb-6 text-sm">
-            Thank you for your patience! I'm currently improving this service. 
+            Thank you for your patience! I'm currently improving this service.
             Apologies for the temporary inconvenience.
           </p>
 
@@ -153,40 +153,40 @@ const Contact = () => {
     setIsModalOpen(true);
     return;
 
-    setLoading(true);
-    setStatus({ type: "", message: "" });
+    // setLoading(true);
+    // setStatus({ type: "", message: "" });
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          to_name: "Lahiru Anushka",
-          from_email: formData.email,
-          to_email: "lahiruanushka121@gmail.com",
-          message: formData.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setStatus({
-            type: "success",
-            message: "Message sent successfully! I'll respond soon.",
-          });
-          setFormData({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          setStatus({
-            type: "error",
-            message: "Message send failed. Please try again.",
-          });
-        }
-      );
+    // emailjs
+    //   .send(
+    //     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+    //     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+    //     {
+    //       from_name: formData.name,
+    //       to_name: "Lahiru Anushka",
+    //       from_email: formData.email,
+    //       to_email: "yourmail@gmail.com",
+    //       message: formData.message,
+    //     },
+    //     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    //   )
+    //   .then(
+    //     () => {
+    //       setLoading(false);
+    //       setStatus({
+    //         type: "success",
+    //         message: "Message sent successfully! I'll respond soon.",
+    //       });
+    //       setFormData({ name: "", email: "", message: "" });
+    //     },
+    //     (error) => {
+    //       setLoading(false);
+    //       console.error(error);
+    //       setStatus({
+    //         type: "error",
+    //         message: "Message send failed. Please try again.",
+    //       });
+    //     }
+    //   );
   };
 
   const containerVariants = {
@@ -214,7 +214,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-950 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-10">
-      <div className="relative py-16 lg:py-24 bg-gray-950 overflow-hidden">
+      <div className="relative py-16 lg:py-24 bg-gray-950 overflow-hidden w-full max-w-6xl">
         {/* Background Gradient */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-24 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
@@ -264,8 +264,11 @@ const Contact = () => {
           className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 bg-gray-900/60 backdrop-blur-lg rounded-3xl p-6 md:p-10 shadow-2xl border border-gray-800"
         >
           {/* Form Section */}
-          <motion.div variants={itemVariants} className="space-y-6">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <motion.div
+            variants={itemVariants}
+            className="space-y-6 order-2 lg:order-1 flex items-center justify-center"
+          >
+            <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-md">
               {/* Name Input */}
               <motion.div variants={itemVariants} className="relative">
                 <label
@@ -447,9 +450,14 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Earth Canvas Section */}
-          <motion.div className="flex items-center justify-center w-full h-full">
-            <EarthCanvas />
+          {/* Earth Canvas Section - Responsive for all screen sizes */}
+          <motion.div
+            variants={itemVariants}
+            className="flex items-center justify-center w-full h-full order-1 lg:order-2"
+          >
+            <div className="w-full max-w-md lg:max-w-full h-64 md:h-80 lg:h-full">
+              <EarthCanvas />
+            </div>
           </motion.div>
         </motion.div>
 
