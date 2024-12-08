@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { EarthCanvas } from "./canvas";
+import { EarthCanvas, StarsCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import {
   LuAlertCircle,
@@ -213,8 +213,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-10">
-      <div className="relative py-16 lg:py-24 bg-gray-950 overflow-hidden w-full max-w-6xl">
+    <div className="min-h-screen bg-gray-950 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-10 relative">
+      {/* StarsCanvas */}
+      <div className="absolute inset-0 z-0">
+        <StarsCanvas />
+      </div>
+
+      <div className="relative py-16 lg:py-24 bg-transparent overflow-hidden w-full max-w-6xl z-10">
         {/* Background Gradient */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-24 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
@@ -450,7 +455,7 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Earth Canvas Section - Responsive for all screen sizes */}
+          {/* Earth Canvas Section */}
           <motion.div
             variants={itemVariants}
             className="flex items-center justify-center w-full h-full order-1 lg:order-2"
