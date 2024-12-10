@@ -275,10 +275,21 @@ const Projects = () => {
   const [isGitHubPopupOpen, setIsGitHubPopupOpen] = useState(false);
 
   return (
-    <div id="projects" className="bg-gradient-to-br min-h-screen py-12 md:py-16 relative overflow-hidden">
+    <motion.div 
+      id="projects" 
+      className="bg-gradient-to-br py-12 md:py-16 relative"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div variants={textVariant()}>
+        <motion.div 
+          variants={textVariant()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+        >
           <p className={`${styles.sectionSubText} text-center`}>
             Innovative Solutions & Creative Coding
           </p>
@@ -312,8 +323,9 @@ const Projects = () => {
           )}
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 };
+
 
 export default SectionWrapper(Projects, "projects");
