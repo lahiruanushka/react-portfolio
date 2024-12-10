@@ -67,7 +67,7 @@ const UnavailableServiceModal = ({ isOpen, onClose }) => {
                 <FaEnvelope className="text-2xl" />
               </a>
               <a
-                href="https://twitter.com/lahiruanuz"
+                href="https://twitter.com/lahiruanushz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-[#1DA1F2] transition-colors"
