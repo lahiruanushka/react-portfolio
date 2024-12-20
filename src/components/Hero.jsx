@@ -69,6 +69,35 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-[3] pointer-events-none">
+        <a href="#about" className="pointer-events-auto">
+          <div className="relative w-[35px] h-[64px] rounded-3xl flex justify-center items-start p-2 overflow-hidden">
+            {/* Animated gradient border */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-spin blur-sm opacity-75" />
+
+            {/* Inner black background */}
+            <div className="absolute inset-[2px] rounded-3xl bg-black" />
+
+            {/* Scrolling dot */}
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="relative w-3 h-3 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-1 z-10"
+            >
+              {/* Glow effect for the dot */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 blur-sm" />
+            </motion.div>
+          </div>
+        </a>
+      </div>
     </section>
   );
 };
