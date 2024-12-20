@@ -1,15 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden">
-      <div className="absolute inset-0 top-[120px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
+      {/* ComputersCanvas container */}
+      <div className="absolute inset-0">
+        <ComputersCanvas />
+      </div>
+
+      {/* Semi-transparent overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-[2] pointer-events-none" />
+
+      {/* Main content container  */}
+      <div className="absolute inset-0 top-[120px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-[3] pointer-events-none">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-10">
           {/* Text Content */}
           <motion.div
-            className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl w-full z-10"
+            className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl w-full"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -33,7 +43,7 @@ const Hero = () => {
 
           {/* Profile Image */}
           <motion.div
-            className="flex flex-col items-center justify-center w-full lg:w-auto"
+            className="flex flex-col items-center justify-center w-full lg:w-auto pointer-events-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -58,6 +68,25 @@ const Hero = () => {
             <div className="w-1 h-40 sm:h-60 lg:h-80 violet-gradient" />
           </motion.div>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-[3] pointer-events-none">
+        <a href="#about" className="pointer-events-auto">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-white mb-1"
+            />
+          </div>
+        </a>
       </div>
     </section>
   );
