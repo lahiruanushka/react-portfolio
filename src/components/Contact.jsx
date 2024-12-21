@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { EarthCanvas, StarsCanvas } from "./canvas";
@@ -99,6 +99,7 @@ const UnavailableServiceModal = ({ isOpen, onClose }) => {
 
 const Contact = () => {
   const formRef = useRef();
+  const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -188,6 +189,22 @@ const Contact = () => {
     //     }
     //   );
   };
+
+  // Add screen size detection
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -455,15 +472,17 @@ const Contact = () => {
             </form>
           </motion.div>
 
-          {/* Earth Canvas Section */}
-          <motion.div
-            variants={itemVariants}
-            className="flex items-center justify-center w-full h-full order-1 lg:order-2"
-          >
-            <div className="w-full max-w-md lg:max-w-full h-64 md:h-80 lg:h-full">
-              <EarthCanvas />
-            </div>
-          </motion.div>
+          {/* Earth Canvas Section - Only render on non-mobile */}
+          {!isMobile && (
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center justify-center w-full h-full order-1 lg:order-2"
+            >
+              <div className="w-full max-w-md lg:max-w-full h-64 md:h-80 lg:h-full">
+                <EarthCanvas />
+              </div>
+            </motion.div>
+          )}
         </motion.div>
 
         <UnavailableServiceModal
