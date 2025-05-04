@@ -195,6 +195,20 @@ const experiences = [
       "Updated the Windows Forms application with improved functionality and performance, resolving issues in the previous version",
     ],
   },
+  {
+    title: "Associate Software Engineer",
+    company_name: "DSP Engineering Solutions",
+    icon: dsp,
+    iconBg: "#383E56",
+    date: "February 2024 - Present",
+    points: [
+      "Developed C# .NET Windows Forms applications, focusing on building responsive and functional desktop solutions",
+      "Designed user interfaces using Angular and Figma, ensuring modern and user-friendly UI/UX",
+      "Built and maintained backend services with .NET APIs, enabling secure and efficient data communication",
+      "Worked with Microsoft SQL Server and MongoDB for structured and unstructured data management",
+      "Improved application performance through problem-solving, debugging, and backend optimization",
+    ],
+  },
 ];
 
 const educationDetails = [
