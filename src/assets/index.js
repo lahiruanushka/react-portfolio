@@ -30,6 +30,8 @@ import sqlserver from "./tech/sqlserver.png";
 import sqlite from "./tech/sqlite.png";
 import csharp from "./tech/csharp.png";
 import dotnet from "./tech/dotnet.jpg";
+import angular from "./tech/angular.png"
+import nextjs from "./tech/nextjs.png"
 
 // expirence
 import dsp from "./company/dsp.png";
@@ -89,5 +91,7 @@ export {
   sqlserver,
   sqlite,
   csharp,
-  dotnet
+  dotnet,
+  angular,
+  nextjs
 };

@@ -163,12 +163,7 @@ const About = () => {
 
             {/* Text content */}
             <span className="relative z-10 block">
-              I am an IT graduate from SLIATE, having completed my coursework
-              with graduation pending. During my internship as a trainee
-              Software Engineer, I gained valuable hands-on experience in
-              software development, which solidified my passion for creating
-              dynamic, innovative digital solutions that balance creativity with
-              functionality.
+            Detail-oriented Associate Software Engineer with experience in frontend and backend development using Angular, React, TypeScript, and Next.js. Skilled in implementing role-based access, real-time data visualization, and optimizing performance. Proficient in Git, release management, and collaborative workflows, with a strong focus on UI/UX and code quality.
             </span>
           </div>
         </motion.p>

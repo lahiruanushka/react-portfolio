@@ -78,7 +78,9 @@ const Footer = () => {
               complex problems into elegant interfaces.
             </p>
             <a
-              href="/resume.pdf"
+              href="/Lahiru-Anushka-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
             >
               <FaFileDownload className="w-4 h-4" />

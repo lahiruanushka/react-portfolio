@@ -84,7 +84,7 @@ const Hero = () => {
                 relative z-10 bg-white p-1 overflow-hidden"
               >
                 <img
-                  src="/lahiru-anushka.jpg"
+                  src="/lahiru-anushka.png"
                   alt="Lahiru Anushka"
                   className="w-full h-full rounded-full object-cover object-center"
                 />

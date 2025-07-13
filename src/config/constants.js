@@ -36,6 +36,8 @@ import {
   sqlite,
   csharp,
   dotnet,
+  angular,
+  nextjs,
 } from "../assets";
 
 export const navLinks = [
@@ -67,7 +69,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Tech Enthusialst",
+    title: "Tech Enthusiast",
     icon: creator,
   },
 ];
@@ -101,6 +103,16 @@ const technologies = [
   {
     name: "Vue JS",
     icon: vue,
+    category: "Frontend",
+  },
+  {
+    name: "Next JS",
+    icon: nextjs,
+    category: "Frontend",
+  },
+  {
+    name: "Angular JS",
+    icon: angular,
     category: "Frontend",
   },
   {
@@ -188,11 +200,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "November 2023 - June 2024",
     points: [
-      "Gained hands-on experience in software application development and improvement",
-      "Worked on OPC UA servers and clients, gaining knowledge of secure and reliable machine-to-machine communication",
-      "Contributed to quality assurance for web and software applications, performing testing and debugging tasks",
-      "Played a key role in enhancing the Meter Configuration Tool by developing a new version using C# .NET",
-      "Updated the Windows Forms application with improved functionality and performance, resolving issues in the previous version",
+      "Gained hands-on experience in developing and improving software applications during the internship",
+      "Worked with OPC UA servers and clients for secure and reliable machine-to-machine communication",
+      "Contributed to quality assurance by testing and debugging web and software applications",
+      "Developed and enhanced Windows Forms applications using C# .NET for better performance and usability"
     ],
   },
   {
@@ -202,13 +213,13 @@ const experiences = [
     iconBg: "#383E56",
     date: "February 2024 - Present",
     points: [
-      "Developed C# .NET Windows Forms applications, focusing on building responsive and functional desktop solutions",
-      "Designed user interfaces using Angular and Figma, ensuring modern and user-friendly UI/UX",
-      "Built and maintained backend services with .NET APIs, enabling secure and efficient data communication",
-      "Worked with Microsoft SQL Server and MongoDB for structured and unstructured data management",
-      "Improved application performance through problem-solving, debugging, and backend optimization",
+      "Develop C# .NET Windows Forms applications with a focus on performance and intuitive UI design",
+      "Contribute to frontend development using Next.js and Angular for responsive and user-friendly interfaces",
+      "Work with Microsoft SQL Server and MongoDB for efficient data management",
+      "Solve complex technical issues and enhance overall application functionality"
     ],
   },
+  
 ];
 
 const educationDetails = [
@@ -250,7 +261,7 @@ const projects = [
   {
     name: "JobFinder",
     description:
-      "A comprehensive job search platform built with Laravel, designed to bridge the gap between job seekers and employers. The application features robust user authentication, advanced job filtering, and an intuitive admin dashboard for managing job listings, user profiles, and platform interactions.",
+      "A job search platform built with Laravel to connect job seekers and employers. It features secure user authentication, advanced job filtering, and a user-friendly admin dashboard for managing listings and users.",
     tags: [
       {
         name: "Laravel",
@@ -276,7 +287,7 @@ const projects = [
   {
     name: "PostVibe",
     description:
-      "An innovative social media platform leveraging Laravel's powerful ecosystem. PostVibe offers a rich user experience with features like real-time post sharing, dynamic user profiles, advanced search functionality, and secure authentication. The platform demonstrates modern web development practices with a focus on user engagement and interaction.",
+      "An interactive social media platform built with Laravel, enabling real-time post sharing, dynamic user profiles, secure login, and advanced search features for a modern user experience.",
     tags: [
       {
         name: "Laravel",
@@ -302,7 +313,7 @@ const projects = [
   {
     name: "ByteThoughts",
     description:
-      "A cutting-edge blogging platform built with the MERN stack, offering a seamless content creation and discovery experience. Features include user authentication with JWT, rich text editing, categorized blog posts, and an admin panel for content moderation. The application showcases modern web development techniques and responsive design principles.",
+      "A full-featured blogging platform developed using the MERN stack. It includes secure JWT-based authentication, rich text editing, blog post categorization, and an admin panel for managing content.",
     tags: [
       {
         name: "MongoDB",
@@ -327,7 +338,7 @@ const projects = [
   {
     name: "BookWhiz",
     description:
-      "A sophisticated e-commerce bookstore application developed using the MERN stack. BookWhiz provides a comprehensive shopping experience with features like advanced book browsing, intelligent cart management, wishlist functionality, and secure user authentication. The platform demonstrates a clean, modern design with robust backend infrastructure.",
+      "An e-commerce bookstore application built with the MERN stack. It offers a seamless shopping experience with advanced browsing, cart and wishlist functionality, and secure user authentication.",
     tags: [
       {
         name: "MongoDB",
@@ -353,7 +364,7 @@ const projects = [
   {
     name: "EstateEase",
     description:
-      "A modern real estate application that revolutionizes property exploration and management. Built with React and Appwrite, EstateEase offers interactive property listings, geospatial mapping with Leaflet, comprehensive user authentication, and a responsive design. The application leverages cutting-edge technologies to create an intuitive real estate browsing experience.",
+      "A modern real estate web app built using React and Appwrite. It features interactive property listings, geolocation integration via Leaflet, secure authentication, and a responsive interface for optimal user experience.",
     tags: [
       {
         name: "Appwrite",
@@ -379,7 +390,7 @@ const projects = [
   {
     name: "BlogVerse",
     description:
-      "BlogVerse is a modern blogging platform built with React and Appwrite, featuring rich text editing, secure user authentication, and a responsive design powered by Tailwind CSS. The app enables users to easily create and manage posts, while leveraging Appwrite for backend services. With state management handled by Redux Toolkit and dynamic routing via React Router, this project offers a seamless and interactive user experience for bloggers and content creators.",
+      "A sleek blogging platform developed with React and Appwrite. It supports rich text post creation, secure user login, dynamic routing via React Router, and responsive design styled with Tailwind CSS. Redux Toolkit handles state management for a seamless experience.",
     tags: [
       {
         name: "Appwrite",
@@ -403,6 +414,7 @@ const projects = [
       "https://github.com/lahiruanushka/react-appwrite-blog-app.git",
   },
 ];
+
 
 export default projects;
 
