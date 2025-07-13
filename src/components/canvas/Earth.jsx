@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+  const earth = useGLTF("/planet/scene.gltf");
 
   useEffect(() => {
     // Cleanup function to dispose of the model when component unmounts
@@ -85,6 +85,6 @@ const EarthCanvas = () => {
 };
 
 // Preload the model
-useGLTF.preload("./planet/scene.gltf");
+useGLTF.preload("/planet/scene.gltf");
 
 export default EarthCanvas;

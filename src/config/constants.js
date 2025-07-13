@@ -195,7 +195,7 @@ const technologies = [
 const experiences = [
   {
     title: "Trainee Software Engineer",
-    company_name: "DSP Engineering Solutions",
+    company_name: "DSP Engineering Solutions Pvt Ltd",
     icon: dsp,
     iconBg: "#383E56",
     date: "November 2023 - June 2024",
@@ -208,7 +208,7 @@ const experiences = [
   },
   {
     title: "Associate Software Engineer",
-    company_name: "DSP Engineering Solutions",
+    company_name: "DSP Engineering Solutions Pvt Ltd",
     icon: dsp,
     iconBg: "#383E56",
     date: "February 2024 - Present",
