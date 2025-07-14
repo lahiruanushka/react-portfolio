@@ -37,6 +37,40 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Intersection Observer for section highlighting
+  useEffect(() => {
+    const sectionIds = navLinks.map((link) => link.id);
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+    if (sections.length === 0) return;
+
+    let ticking = false;
+    const handleSectionScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          let currentSection = "";
+          for (let i = 0; i < sections.length; i++) {
+            const section = sections[i];
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 120 && rect.bottom > 120) {
+              currentSection = section.id;
+              break;
+            }
+          }
+          const found = navLinks.find((link) => link.id === currentSection);
+          if (found) {
+            setActive(found.title);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener("scroll", handleSectionScroll);
+    return () => window.removeEventListener("scroll", handleSectionScroll);
+  }, [navLinks]);
+
   // Close mobile menu when window is resized to desktop size
   useEffect(() => {
     const handleResize = () => {
@@ -51,11 +85,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
           ? "bg-white/80 backdrop-blur-lg shadow-lg dark:bg-slate-900/90"
           : "bg-transparent"
-      }`}
+        }`}
     >
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gray-200/20 dark:bg-gray-700/20">
@@ -107,11 +140,10 @@ const Navbar = () => {
                   className="group relative px-3 py-2 rounded-lg transition-all duration-200 hover:bg-gray-100 dark:hover:bg-gray-800/50"
                 >
                   <span
-                    className={`relative z-10 text-sm font-medium transition-colors duration-200 ${
-                      active === link.title
+                    className={`relative z-10 text-sm font-medium transition-colors duration-200 ${active === link.title
                         ? "text-blue-600 dark:text-blue-400"
                         : "text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400"
-                    }`}
+                      }`}
                   >
                     {link.title}
                   </span>
@@ -139,15 +171,13 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`fixed inset-0 bg-black/10 dark:bg-black/30 backdrop-blur-sm transition-opacity duration-300 sm:hidden ${
-          toggle ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/10 dark:bg-black/30 backdrop-blur-sm transition-opacity duration-300 sm:hidden ${toggle ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setToggle(false)}
       >
         <div
-          className={`absolute right-0 top-16 w-3/4 max-w-sm h-[calc(100vh-4rem)] bg-white dark:bg-slate-900 shadow-2xl transition-transform duration-300 ease-out ${
-            toggle ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute right-0 top-16 w-3/4 max-w-sm h-[calc(100vh-4rem)] bg-white dark:bg-slate-900 shadow-2xl transition-transform duration-300 ease-out ${toggle ? "translate-x-0" : "translate-x-full"
+            }`}
           onClick={(e) => e.stopPropagation()}
         >
           <div className="h-full overflow-y-auto py-6 px-4 space-y-1">
@@ -160,10 +190,9 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
                 className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 
-                  ${
-                    active === link.title
-                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                  ${active === link.title
+                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50"
                   }`}
               >
                 {link.title}
