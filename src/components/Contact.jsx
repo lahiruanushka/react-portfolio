@@ -61,7 +61,7 @@ const UnavailableServiceModal = ({ isOpen, onClose }) => {
             </h3>
             <div className="flex justify-center space-x-4">
               <a
-                href="mailto:lahiruanushkaofficial@gmail.com"
+                href="mailto:lahiruanushkarathnayake@gmail.com"
                 className="text-slate-400 hover:text-white transition-colors"
               >
                 <FaEnvelope className="text-2xl" />

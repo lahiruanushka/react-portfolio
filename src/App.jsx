@@ -14,6 +14,7 @@ import {
 } from "./components";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import "./index.css";
 
 const App = () => {
   return (

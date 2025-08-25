@@ -132,7 +132,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Lahiru Anushka - [lahiruanushkaofficial.com](mailto:lahiruanushkaofficial.com)
+Lahiru Anushka - [lahiruanushkarathnayake.com](mailto:lahiruanushkarathnayake.com)
 
 ## 🙏 Acknowledgments
 

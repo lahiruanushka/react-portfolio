@@ -214,3 +214,22 @@
       linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   }
 }
+
+/* Modern custom scrollbar matching site UI */
+html, body {
+  scrollbar-width: thin;
+  scrollbar-color: #a78bfa #18181b;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 12px;
+}
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: #18181b; /* dark background */
+  border-radius: 8px;
+}
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 8px 2px #8b5cf655;
+  border: 2px solid #18181b;
+}

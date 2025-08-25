@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import ScrollIndicator from "./ScrollIndicator";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -96,10 +95,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 w-full flex justify-center items-center z-[3]">
-        <ScrollIndicator />
-      </div>
+   
     </section>
   );
 };

@@ -29,7 +29,7 @@ const Footer = () => {
     },
     {
       name: "Email",
-      url: "mailto:lahiruanushkaofficial@gmail.com",
+      url: "mailto:lahiruanushkarathnayake@gmail.com",
       icon: MdEmail,
       hoverColor: "hover:text-red-500 dark:hover:text-red-400",
     },

@@ -6,7 +6,6 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const navLinks = [
     { id: "about", title: "About Me" },
@@ -22,15 +21,6 @@ const Navbar = () => {
       // Handle navbar background
       const scrollTop = window.scrollY;
       setScrolled(scrollTop > 50);
-
-      // Calculate scroll progress
-      const winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      setScrollProgress(scrolled);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -90,17 +80,6 @@ const Navbar = () => {
           : "bg-transparent"
         }`}
     >
-      {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gray-200/20 dark:bg-gray-700/20">
-        <div
-          className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-          style={{
-            width: `${scrollProgress}%`,
-            transition: "width 0.1s",
-          }}
-        />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo and Name */}
